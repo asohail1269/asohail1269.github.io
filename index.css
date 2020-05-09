@@ -1,0 +1,828 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*HERO*/
+
+#hero {
+    background-image: url('Assets/Index/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 140vh;
+}
+
+#hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+#hero::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+}
+
+/*NAVIGATION*/
+
+header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    box-shadow: 8px 8px 40px -25px;
+}
+
+.nav-container {
+    width: 55%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: 60px;
+    margin-left: 15px;
+}
+
+.logo img:hover {
+    cursor: pointer;
+}
+
+.nav-bar {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #efefef;
+    font-size: 18px;
+}
+
+.nav-bar a:hover {
+    color: #ea9f4d;
+    cursor: pointer;
+}
+
+#home {
+    color: #ea9f4d;
+}
+
+/*BANNER*/
+
+.banner {
+    text-align: center;
+    color: #efefef;
+    z-index: 200;
+    position: absolute;
+    width: 900px;
+    height: 400px;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.banner h1 {
+    font-size: 130px;
+}
+
+.banner h3 {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+/*PROJECTS*/
+
+#projects {
+    width: 100%;
+    height:150vh;
+    background: #efefef;
+}
+
+.container.projects {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto; 
+    color: black; 
+}
+
+.project-heading {
+    height: 30vh;
+    position: relative;
+    text-align: center;
+}
+
+.heading-container {
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+}
+
+.project-heading h1 {
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.project-heading h2 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+.project-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project {
+    height: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-image {
+    width: 55%;
+}
+
+.project-content {
+    width: 35%;
+}
+
+.project-content h3 {
+    font-size: 30px;
+}
+
+.project-content p {
+    text-align: justify;
+    margin: 20px 0 30px 0;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.project-content h4 {
+    text-decoration: underline;
+    color: #ec8961;
+}
+
+.project-image.one {
+    background: url('Assets/Index/project1.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.project-image.two {
+    background: url('Assets/Index/project2.jpeg');
+    background-size: cover;
+}
+
+.end {
+    height: 20vh;
+}
+
+/*TRAVEL*/
+
+#travel {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.travel {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+.travels {
+    width: 50%;
+    position: relative;
+}
+
+.travels.one {
+    background: url('Assets/Index/italy1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.travels.two {
+    background: url('Assets/Index/italy2.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.travels.three {
+    background: url('Assets/Index/italy3.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.travels.four {
+    background: url('Assets/Index/italy4.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.overlap {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    background: #efefef;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid black;
+}
+
+.overlap h1 {
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.overlap h2 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+.details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    height: 70px;
+    width: 100%;
+    background: rgba(0,0,0,.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scaleX(0);
+}
+
+.details h2 {
+    color: white;
+    opacity: .8;
+    font-size: 20px;
+}
+ 
+.travels:hover .details {
+    transform: scaleX(1);
+    transition: transform 1s;
+}
+
+
+
+/*ABOUT*/
+
+#about {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    background: #efefef;
+}
+
+.container.about {
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.about-main {
+    width: 85%;
+    height: 75%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+    border: 5px solid black;
+    padding: 20px 20px;
+}
+
+.about1 {
+    width: 47%;
+    height: 100%;
+}
+
+.about2 {
+    width: 47%;
+    height: 100%;
+}
+
+.about1 h1 {
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+#about p {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.extra {
+    margin: 0 0 20px 0;
+}
+
+.border.block1 {
+    width: 10px;
+    height: 90px;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.border.block2 {
+    width: 90px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.border.block3 {
+    width: 90px;
+    height: 10px;
+    background: black;
+    position: absolute;
+   right: 0;
+    bottom: 0;
+}
+
+.border.block4 {
+    width: 10px;
+    height: 90px;
+    background: black;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+/*CONTACT*/
+
+
+#contact {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    background: #ea9f4d;
+    color: white;
+}
+
+.contact1 {
+    width: 60%;
+    height: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contact1 h1 {
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 90px 0 50px 0;
+}
+
+.connect {
+    padding: 15px 35px ;
+    font-size: 25px;
+    font-weight: 400;
+    cursor: pointer;
+    background: white;
+    border-radius: .8rem;
+}
+
+.connect a {
+    color: #ea9f4d;
+    text-decoration: none;
+}
+
+.connect:hover {
+    text-decoration: underline;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+    /*HERO*/
+
+    .banner h1 {
+        font-size: 60px;
+    }
+    
+    .banner h3 {
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .nav-container {
+        width: 90%;
+    }
+
+    .nav-bar {
+        width: 300px;
+    }
+
+    /*PROJECTS*/
+
+    #projects {
+        height: 108vh;
+    }
+
+    .container.projects {
+        width: 75%;
+    }
+
+    .heading-container h1 {
+        font-size: 40px;
+    }
+
+    .project {
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .project-container {
+        height: 135vh;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 50%;
+    }
+
+    .project-content {
+        width: 100%;
+        height: 45%;
+    }
+
+    .project-content h3 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #specific {
+        display: none;
+    }
+
+    /*TRAVEL*/
+    
+
+    .travel-container {
+        width: 70%;
+        height: 80%;
+        top: 15%;
+        flex-direction: column;
+    }
+
+    #travel {
+        height: 100vh;  
+    }
+
+    .overlap {
+        width: 250px;
+        height: 120px;
+        border: 5px solid black;
+    }
+
+    .overlap h1 {
+        font-size: 40px;
+    }
+
+    .overlap h2 {
+        font-size: 20px;
+    }
+
+    .details {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translate(-50%,-50%);
+        height: 70px;
+        width: 100%;
+        background: rgba(0,0,0,.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: scaleX(0);
+    }
+    
+    .details h2 {
+        color: white;
+        opacity: .8;
+        font-size: 20px;
+    }
+
+
+    /*ABOUT*/
+
+    #about {
+        height: 100vh;
+    }
+
+    .container.about {
+        height: 100%;
+        width: 80%;
+    }
+
+    .about-main {
+        flex-direction: column;
+        border: 8px solid black;
+    }
+
+    .about1 h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .about1 {
+        width: 100%;
+    }
+
+    .about2 {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .remove {
+        display: none;
+    }
+
+    .extra {
+        margin-top: 20px;
+    }
+
+    .border {
+        display: none;
+    }
+
+    /*CONTACT*/
+
+    #contact {
+        height: 95vh;
+    }
+
+    .contact1 {
+        width: 80%;
+    }
+
+    .contact1 h1 {
+        font-size: 40px;
+        margin: 8rem 0 5rem 0;
+        text-align: center;
+    }
+
+    .connect {
+        padding: 10px 20px;
+        font-size: 20px;
+        font-weight: 400;
+        cursor: pointer;
+        background: white;
+        border-radius: .8rem;
+    }
+
+    .contact2 {
+        width: 100%;
+    }
+
+    
+}   
+
+@media only screen and (min-width: 800px) and (max-width: 1400px) {
+
+    /*HERO*/
+
+    .banner h1 {
+        font-size: 60px;
+    }
+    
+    .banner h3 {
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .nav-container {
+        width: 90%;
+    }
+
+    .nav-bar {
+        width: 300px;
+    }
+
+
+    /*TRAVEL*/
+    
+
+    .travel-container {
+        width: 70%;
+        height: 80%;
+        top: 15%;
+        flex-direction: column;
+    }
+
+    #travel {
+        height: 100vh;  
+    }
+
+    .overlap {
+        width: 250px;
+        height: 120px;
+        border: 5px solid black;
+    }
+
+    .overlap h1 {
+        font-size: 40px;
+    }
+
+    .overlap h2 {
+        font-size: 20px;
+    }
+
+    .details {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translate(-50%,-50%);
+        height: 70px;
+        width: 100%;
+        background: rgba(0,0,0,.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: scaleX(0);
+    }
+    
+    .details h2 {
+        color: white;
+        opacity: .8;
+        font-size: 20px;
+    }
+
+    /*ABOUT*/
+
+    #about {
+        height: 100vh;
+    }
+
+    .container.about {
+        height: 100%;
+        width: 80%;
+    }
+
+    .about-main {
+        flex-direction: column;
+        border: 8px solid black;
+    }
+
+    .about1 h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .about1 {
+        width: 100%;
+    }
+
+    .about2 {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .remove {
+        display: none;
+    }
+
+    .extra {
+        margin-top: 20px;
+    }
+
+    .border {
+        display: none;
+    }
+
+    /*CONTACT*/
+
+    #contact {
+        height: 75vh;
+    }
+
+    .contact1 {
+        width: 80%;
+    }
+
+    .contact1 h1 {
+        font-size: 40px;
+        margin: 8rem 0 5rem 0;
+        text-align: center;
+    }
+
+    .connect {
+        padding: 10px 20px;
+        font-size: 20px;
+        font-weight: 400;
+        cursor: pointer;
+        background: white;
+        border-radius: .8rem;
+    }
+
+    .contact2 {
+        width: 100%;
+    }
+
+
+}
+
+@media only screen and (max-width: 950px) {
+
+    /*PROJECTS*/
+
+    #projects {
+        height: 108vh;
+    }
+
+    .container.projects {
+        width: 75%;
+    }
+
+    .heading-container h1 {
+        font-size: 40px;
+    }
+
+    .project {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .project-container {
+        height: 135vh;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 50%;
+    }
+
+    .project-content {
+        width: 100%;
+        height: 45%;
+    }
+
+    .project-content h3 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #specific {
+        display: none;
+    }
+
+}
+
+
+
+
+
+
